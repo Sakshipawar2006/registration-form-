@@ -1,4 +1,4 @@
-// First Name
+
 let fnameInput = document.getElementById("firstName");
 let fnameError = document.getElementById("fnameError");
 
@@ -14,7 +14,6 @@ fnameInput.addEventListener('blur', function() {
     }
 });
 
-// Father Name
 let fatherInput = document.getElementById("fatherName");
 let fatherError = document.getElementById("fatherError");
 
@@ -30,7 +29,6 @@ fatherInput.addEventListener('blur', function() {
     }
 });
 
-// Last Name
 let lastNameInput = document.getElementById("lastName");
 let lastError = document.getElementById("lastError");
 
@@ -44,9 +42,7 @@ lastNameInput.addEventListener('blur', function() {
     } else {
         lastError.textContent = "";
     }
-});
 
-// Mobile Number
 let mNumberInput = document.getElementById("mNumber");
 let mobError = document.getElementById("mobError");
 
@@ -62,7 +58,7 @@ mNumberInput.addEventListener('blur', function() {
     }
 });
 
-// Email
+
 let mailInput = document.getElementById("mail");
 let mailError = document.getElementById("mailError");
 
@@ -78,7 +74,7 @@ mailInput.addEventListener('blur', function() {
     }
 });
 
-// Hobbies
+
 let hobbieInput = document.getElementById("hobbie");
 let hobError = document.getElementById("hobError");
 
@@ -94,7 +90,7 @@ hobbieInput.addEventListener('blur', function() {
     }
 });
 
-// Address
+
 let addInput = document.getElementById("add");
 let addError = document.getElementById("addError");
 
@@ -110,7 +106,7 @@ addInput.addEventListener('blur', function() {
     }
 });
 
-// Gender
+
 let genderSelect = document.querySelector("select[name='gender']");
 let genderError = document.getElementById("genderError");
 
@@ -122,7 +118,7 @@ genderSelect.addEventListener('change', function() {
     }
 });
 
-// DOB
+
 let dobInput = document.getElementById("dob");
 let dobError = document.getElementById("dobError");
 
@@ -138,7 +134,7 @@ dobInput.addEventListener('change', function() {
     }
 });
 
-// File Upload & Preview
+
 let fileInput = document.getElementById("file-input");
 let errorMessage = document.getElementById("error-message");
 let photoSection = document.getElementById("photo-section");
@@ -168,76 +164,73 @@ fileInput.addEventListener('change', function() {
         }
     } else {
         errorMessage.textContent = "Please upload a photo!!";
-    }
-});
-
-// Submit Button Validation
+    
 document.getElementById("btn").addEventListener("click", function(event) {
     event.preventDefault();
     let valid = true;
 
-    // First Name
+    
     let fname = fnameInput.value.trim();
     if (fname === "" || !/^[A-Za-z]+$/.test(fname)) {
         fnameError.textContent = fname === "" ? "First name is required!!" : "Only alphabets allowed!!";
         valid = false;
     } else { fnameError.textContent = ""; }
 
-    // Father Name
+    
     let fatherName = fatherInput.value.trim();
     if (fatherName === "" || !/^[A-Za-z]+$/.test(fatherName)) {
         fatherError.textContent = fatherName === "" ? "Father's name is required!!" : "Only alphabets allowed!!";
         valid = false;
     } else { fatherError.textContent = ""; }
 
-    // Last Name
+    
     let lastName = lastNameInput.value.trim();
     if (lastName === "" || !/^[A-Za-z]+$/.test(lastName)) {
         lastError.textContent = lastName === "" ? "Last name is required!!" : "Only alphabets allowed!!";
         valid = false;
     } else { lastError.textContent = ""; }
 
-    // Mobile
+    
     let mNumber = mNumberInput.value.trim();
     if (mNumber === "" || !/^[0-9]{10}$/.test(mNumber)) {
         mobError.textContent = mNumber === "" ? "Mobile number is required!!" : "Only 10 digits allowed!!";
         valid = false;
     } else { mobError.textContent = ""; }
 
-    // Email
+    
     let mail = mailInput.value.trim();
     if (mail === "" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail)) {
         mailError.textContent = mail === "" ? "Email is required!!" : "Invalid email format!!";
         valid = false;
     } else { mailError.textContent = ""; }
 
-    // Hobbies
+    
     let hobbie = hobbieInput.value.trim();
     if (hobbie === "" || !/^[A-Za-z\s]+$/.test(hobbie)) {
         hobError.textContent = hobbie === "" ? "Mention hobbies!!" : "Mention hobbies correctly!!";
         valid = false;
     } else { hobError.textContent = ""; }
 
-    // Address
+    
     let add = addInput.value.trim();
     if (add === "" || !/^[a-zA-Z0-9\s,.'-]{3,}$/.test(add)) {
         addError.textContent = add === "" ? "Address is required!!" : "Address is invalid!!";
         valid = false;
     } else { addError.textContent = ""; }
 
-    // Gender
+    
     if (genderSelect.value === "") {
         genderError.textContent = "Please select gender!!";
         valid = false;
     } else { genderError.textContent = ""; }
 
-    // DOB
+    
     if (dobInput.value === "") {
         dobError.textContent = "Please select date of birth!!";
         valid = false;
     } else { dobError.textContent = ""; }
 
-    // File
+    
     const file = fileInput.files[0];
     if (!file) {
         errorMessage.textContent = "Please upload a photo!!";
@@ -246,7 +239,7 @@ document.getElementById("btn").addEventListener("click", function(event) {
         errorMessage.textContent = "Only JPG and PNG files are allowed.";
         valid = false;
     } else if (file.size > 2*1024*1024) {
-        errorMessage.textContent = "File size must be under 2MB.";
+        errorMessage.textContent = "File size must be 2MB.";
         valid = false;
     } else {
         errorMessage.textContent = "";
