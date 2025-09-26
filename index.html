@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href ="style2.css">
+</head>
+<body>
+    
+    
+    <main>
+        <h1> Registration Form !!</h1>
+        <div class="form-row">
+            <h4> First Name:</h4>
+            <input type="text"id="firstName"  placeholder="Enter first name">
+            <span id="fnameError" style="color:red; font-size:14px;"></span>
+        </div>
+
+        <div class ="form-row">
+            <h4>Father's Name:</h4>
+            <input type="text" id ="fatherName" placeholder="Enter father's name">
+            <span id ="fatherError"></span>
+        </div>
+
+        <div class ="form-row">
+            <h4>Last Name:</h4>
+            <input type="text" id ="lastName" placeholder="Enter Last name">
+            <span id ="lastError"></span>
+        </div>
+
+        <div class ="form-row">
+            <h4>Mobile Number:</h4>
+            <input type="text"  id="mNumber" placeholder="Enter Mobile Number">
+            <span  id ="mobError" ></span>
+           
+        </div>
+
+        <div class ="form-row">
+            <h4>e-mail:</h4>
+            <input type="text" id ="mail" placeholder="Enter e-mail">
+            <span id ="mailError"></span>
+        </div>
+
+        <div class ="form-row">
+            <h4>Hobbies</h4>
+            <input type="text" id ="hobbie"placeholder="Enter Hobbies">
+            <span id ="hobError"></span>
+
+        </div>
+
+        <div class ="form-row">
+            <h4>Address:</h4>
+            <input type="text"id ="add" placeholder="Enter Address">
+            <span id ="addError"></span>
+        </div>
+
+        
+        <div class="form-row">
+    <h4>Gender:</h4>
+    <select name="gender">
+        <option value="">--Select Gender--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+        
+    </select> 
+    <span id="genderError"></span>
+        </div>
+        <div class = "form-row">
+            <h4>Date of Birth :</h4>
+            <input type="date" id="dob" name ="dob" max="">
+            <span id="dobError"></span>
+        </div>
+
+
+     <h4>upload photo :</h4>
+  <input type="file" id="file-input" accept=".jpg, .jpeg, .png">
+  <p id="error-message" style="color: red;"></p>
+  <div id="photo-section"></div>    
+
+
+
+
+        <button id="btn">Submit</button>
+        <span id="btnError"> </span>
+    </main>
+    <script src="registration.js"></script>
+</body>

@@ -1,0 +1,109 @@
+
+
+body{
+    background-color: #C0D8E0;
+    text-align:center;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+h4{
+    text-align: left;
+}
+#btn{
+  display: block;
+        margin: 20px auto 0;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #191913;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+}
+
+.form-row {
+    flex: 0 0 150px; /* label fixed width */
+        font-weight: bold;
+}
+
+.form-row input,
+    .form-row select {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #999;
+        border-radius: 4px;}
+
+#mobError{
+    color: red;
+    font-size: 14px;
+}   
+#genderError{
+    font-size: 14px;
+    color: red;
+
+}    
+#dobError{
+    font-size: 14px;
+    color: red;
+}
+
+#mobError1{
+    color: green;
+    font-size: 14px;
+} 
+
+#fatherError{
+    color: red;
+    font-size: 14px;
+
+
+}
+
+#lastError{
+    color :red;
+    font-size: 14px;
+}
+
+#mailError{
+    color: red;
+    font-size: 14px;
+}
+
+#addError{
+    color: red;
+    font-size: 14px;
+}
+
+#hobError{
+    color: red;
+    font-size: 14px;
+}
+
+
+ #photo-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+#genderError{
+    font-size: 14px;
+    color: red;
+
+}    
+#dobError{
+    font-size: 14px;
+    color: red;
+}
+
+
+
